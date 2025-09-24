@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vielen Dank für Ihr Feedback - DeepUp appreciates your input!">
+    <title>Vielen Dank - DeepUp</title>
+    <link rel="icon" href="https://deepup.io/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        :root {
+            --deepup-primary: #4ECDC4;
+            --deepup-secondary: #44B3AC;
+            --deepup-dark: #2C3E50;
+            --deepup-light: #F8FFFE;
+            --deepup-gray: #6B7280;
+        }
+
+        * {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        .deepup-logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--deepup-dark);
+            margin-bottom: 2rem;
+        }
+
+        .deepup-logo .accent {
+            color: var(--deepup-primary);
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(78, 205, 196, 0.2);
+            border-radius: 2rem;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            padding: 4rem 2rem;
+            text-align: center;
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+
+        .main-heading {
+            color: var(--deepup-dark);
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+
+        .celebration-gif {
+            margin: 2rem auto;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(78, 205, 196, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .celebration-gif img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 1rem;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .hashtag {
+            font-size: 2rem;
+            color: var(--deepup-primary);
+            font-weight: bold;
+            margin: 2rem 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem 1rem;
+                margin: 1rem;
+            }
+
+            .main-heading {
+                font-size: 2.2rem;
+            }
+
+            .hashtag {
+                font-size: 1.5rem;
+            }
+
+            .deepup-logo {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-heading {
+                font-size: 1.8rem;
+            }
+
+            .deepup-logo {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-100">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <div class="container animate-fade-in">
+            <div class="deepup-logo">
+                <span class="accent">Deep</span>Up
+            </div>
+
+            <h1 class="main-heading">Danke dir!</h1>
+
+            <div class="celebration-gif">
+                <img src="https://media.giphy.com/media/26u4cqiYI30juCOGY/giphy.gif" 
+                     alt="Celebration Animation" 
+                     loading="lazy">
+            </div>
+
+            <div class="hashtag">#YourInputMatters</div>
+        </div>
+    </div>
+
+    <script>
+        // Add fade-in animation on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.querySelector('.container');
+            container.classList.add('animate-fade-in');
+        });
+    </script>
+</body>
+</html>
